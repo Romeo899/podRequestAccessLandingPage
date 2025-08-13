@@ -1,19 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Pod request access landing page</title>
-</head>
-<body>
-  Publish your podcasts everywhere.
+    <meta
+      name="description"
+      content="Publish your podcasts everywhere. Upload your audio to Pod with a single click, and we'll distribute your podcast to Spotify, Apple Podcasts, Google Podcasts, and more!"
+    />
+    <meta
+      name="keywords"
+      content="podcast hosting, podcast distribution, publish podcasts, Spotify, Apple Podcasts, Google Podcasts, Pocket Casts, podcast platforms"
+    />
+    <meta name="author" content="Ruben de Man" />
 
-  Upload your audio to Pod with a single click. We’ll then distribute your podcast to Spotify, 
-  Apple Podcasts, Google Podcasts, Pocket Casts and more!
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
 
-  Request access
-</body>
+    <title>Frontend Mentor | Pod request access landing page</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,300;0,700;1,300;1,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="main">
+      <picture class="main__background">
+        <!-- Source for mobile screens -->
+        <source
+          srcset="./assets/mobile/image-host.jpg"
+          media="(max-width: 502px)"
+        />
+
+        <!-- Source for tablet screens -->
+        <source
+          srcset="./assets/tablet/image-host.jpg"
+          media="(max-width: 768px)"
+        />
+
+        <!-- Source for desktop screens -->
+        <source
+          srcset="./assets/desktop/image-host.jpg"
+          media="(min-width: 769px)"
+        />
+
+        <!-- Fallback image for browsers that don't support <picture> -->
+        <img
+          src="./assets/desktop/image-host.jpg"
+          width="888"
+          height="640"
+          alt="Podcasting equipment and studio setup"
+        />
+      </picture>
+
+      <img
+        class="main__logo"
+        src="./assets/desktop/logo.svg"
+        width="135"
+        height="56"
+        alt="Pod Logo"
+      />
+      <div class="main__content">
+        <h1 class="main__title">
+          Publish your podcasts <span>everywhere.</span>
+        </h1>
+        <p class="main__text">
+          Upload your audio to Pod with a single click. We’ll then distribute
+          your podcast to Spotify, Apple Podcasts, Google Podcasts, Pocket Casts
+          and more!
+        </p>
+        <form action="#" class="form" id="form">
+          <div class="form__content">
+            <input
+              class="form__input"
+              type="text"
+              name="email"
+              id="email"
+              placeholder="Email address"
+              required
+              aria-required="true"
+              aria-describedby="emailError"
+            />
+
+            <button
+              type="submit"
+              class="form__button"
+              aria-label="Request access"
+            >
+              <span>Request access</span>
+            </button>
+          </div>
+          <p class="form__error" id="emailError">
+            Oops! Please check your email
+          </p>
+        </form>
+        <ul class="main__platforms">
+          <li>
+            <a href="#"
+              ><img
+                class="main__platform"
+                src="./assets/desktop/spotify.svg"
+                width="96"
+                height="29"
+                alt="Spotify logo"
+            /></a>
+          </li>
+          <li>
+            <a href="#"
+              ><img
+                class="main__platform"
+                src="./assets/desktop/apple-podcast.svg"
+                width="78"
+                height="29"
+                alt="Apple Podcasts logo"
+            /></a>
+          </li>
+          <li>
+            <a href="#"
+              ><img
+                class="main__platform"
+                src="./assets/desktop/google-podcasts.svg"
+                width="125"
+                height="18"
+                alt="Google Podcasts logo"
+            /></a>
+          </li>
+          <li>
+            <a href="#"
+              ><img
+                class="main__platform"
+                src="./assets/desktop/pocket-casts.svg"
+                width="129"
+                height="26"
+                alt="Pocket Casts logo"
+            /></a>
+          </li>
+        </ul>
+      </div>
+    </main>
+
+    <footer class="attribution">
+      <p>
+        Challenge by
+        <a
+          class="attribution__link"
+          href="https://www.frontendmentor.io?ref=challenge"
+          target="_blank"
+          >Frontend Mentor</a
+        >. Coded by
+        <a
+          class="attribution__link"
+          href="https://rubendeman.nl"
+          target="_blank"
+          >Romeo Codes</a
+        >.
+      </p>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
 </html>
